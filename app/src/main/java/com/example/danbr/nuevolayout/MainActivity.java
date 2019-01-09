@@ -1,7 +1,9 @@
 package com.example.danbr.nuevolayout;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -29,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
         spinSonido = (Spinner) findViewById(R.id.spinner4);
         String[] sonidos = {"Silencio","Explosion","Grillo","Laser","Mensaje","Pikachu","Redobles","Trompeta","Random"};
         spinSonido.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sonidos));
+
+    }
+
+    public void cambiar(View view){
+
+        Intent cambio = new Intent(this,SegundoActivity.class);
+        startActivity(cambio);
 
     }
 }

@@ -91,6 +91,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="50dp"
         android:background="@color/colorAccent"
+        android:onClick="cambiar"
         android:text="@string/boton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
