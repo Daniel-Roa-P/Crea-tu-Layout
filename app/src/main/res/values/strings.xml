@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Crea tu propio Layout</string>
+    <string name="color">Color:</string>
+    <string name="imagen">Imagen:</string>
+    <string name="frase">Frase:</string>
+    <string name="sonido">Sonido:</string>
+    <string name="boton">Crear</string>
+</resources>
