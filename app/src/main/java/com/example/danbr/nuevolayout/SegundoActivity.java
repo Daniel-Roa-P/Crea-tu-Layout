@@ -29,11 +29,14 @@ public class SegundoActivity extends AppCompatActivity {
         Resources resources = getResources();
 
         int idcolor = resources.getIdentifier(getIntent().getStringExtra("color"), "color", getPackageName());
-        int idImagen = getResources().getIdentifier("@raw:carraso" , null, null);
         int idtexto = resources.getIdentifier(getIntent().getStringExtra("texto"), "string",getPackageName());
         fondo.setBackgroundColor(getResources().getColor(idcolor));
-        imagen.setImageResource(idImagen);
         frase.setText(getResources().getString(idtexto));
+
+        int idImagen = getResources().getIdentifier("com.example.danbr.nuevolayout:raw/" + getIntent().getStringExtra("imagen"), null, null);
+        Glide.with(this).load(idImagen).into(imagen);
+
+
     }
 
     public void cambiar(View view){
