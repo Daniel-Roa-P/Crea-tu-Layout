@@ -5,4 +5,12 @@
     <string name="frase">Frase:</string>
     <string name="sonido">Sonido:</string>
     <string name="boton">Crear</string>
+    <string name="ninguna"> </string>
+    <string name="Belleza">No suelo olvidar una cara, pero con usted haré una excepción</string>
+    <string name="Esperanza">Solo como amigos</string>
+    <string name="Cohelo">El Universo conspira a tu favor</string>
+    <string name="Inteligencia">Hay personas que lo único inteligente que tienen es el celular</string>
+    <string name="Respeto">Perdón por dejarte en visto, no era mi intención abrir el mensaje</string>
+    <string name="Sorpresa">Puto el que lo lea</string>
+    <string name="Optimismo">Hazlo, de todas formas vas a morir algun dia</string>
 </resources>

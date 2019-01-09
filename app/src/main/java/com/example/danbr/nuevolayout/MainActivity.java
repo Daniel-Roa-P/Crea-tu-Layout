@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         spinColores.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, colores));
 
         spinImagen = (Spinner) findViewById(R.id.spinner2);
-        String[] imagenes = {"Vacio","carraso","carrasogif","conejo","conejogif","gatos","gatosgif","modelo","modelogif","moto","motogif","perro","perrogif","pikachu","pikachugif","Random"};
+        String[] imagenes = {"vacio","carraso","carrasogif","conejo","conejogif","gatos","gatosgif","modelo","modelogif","moto","motogif","perro","perrogif","pikachu","pikachugif","Random"};
         spinImagen.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, imagenes));
 
         spinFrase = (Spinner) findViewById(R.id.spinner3);
@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
     public void cambiar(View view){
 
         Intent cambio = new Intent(this,SegundoActivity.class);
+
+        cambio.putExtra("color",spinColores.getSelectedItem().toString());
+        cambio.putExtra( "imagen",spinImagen.getSelectedItem().toString());
+        cambio.putExtra("texto",spinFrase.getSelectedItem().toString());
+
         startActivity(cambio);
 
     }
