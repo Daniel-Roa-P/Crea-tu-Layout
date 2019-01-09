@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         spinFrase.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, frases));
 
         spinSonido = (Spinner) findViewById(R.id.spinner4);
-        String[] sonidos = {"Silencio","Explosion","Grillo","Laser","Mensaje","Pikachu","Redobles","Trompeta","Random"};
+        String[] sonidos = {"silencio","explosion","grillo","laser","mensaje","gritopikachu","redobles","trompeta","Random"};
         spinSonido.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sonidos));
 
     }
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         cambio.putExtra("color",spinColores.getSelectedItem().toString());
         cambio.putExtra( "imagen",spinImagen.getSelectedItem().toString());
         cambio.putExtra("texto",spinFrase.getSelectedItem().toString());
+        cambio.putExtra("sonido",spinSonido.getSelectedItem().toString());
 
         startActivity(cambio);
 
