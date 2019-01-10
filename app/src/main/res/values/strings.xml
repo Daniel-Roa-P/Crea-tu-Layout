@@ -5,7 +5,9 @@
     <string name="frase">Frase:</string>
     <string name="sonido">Sonido:</string>
     <string name="boton">Crear</string>
+    <string name="random">Random</string>
     <string name="ninguna"> </string>
+    <string name="Amor">Aceptalo, es feliz con otro</string>
     <string name="Belleza">No suelo olvidar una cara, pero con usted haré una excepción</string>
     <string name="Esperanza">Solo como amigos</string>
     <string name="Cohelo">El Universo conspira a tu favor</string>

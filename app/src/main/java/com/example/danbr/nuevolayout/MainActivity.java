@@ -9,7 +9,12 @@ import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
-    public Spinner spinColores,spinImagen,spinFrase,spinSonido;
+    public Spinner spinColores, spinImagen, spinFrase, spinSonido;
+
+    public String[] colores = {"Blanco","Amarillo","Azul","Gris","Naranja","Negro","Purpura","Rojo","Verde"};
+    public String[] imagenes = {"vacio","carraso","carrasogif","conejo","conejogif","gatos","gatosgif","modelo","modelogif","moto","motogif","perro","perrogif","pikachu","pikachugif"};
+    public String[] frases = {"ninguna","Amor","Belleza","Esperanza","Cohelo","Inteligencia","Respeto","Sorpresa","Optimismo"};
+    public String[] sonidos = {"silencio","explosion","grillo","laser","mensaje","gritopikachu","redobles","trompeta"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,19 +22,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         spinColores = (Spinner) findViewById(R.id.spinner);
-        String[] colores = {"Blanco","Amarillo","Azul","Gris","Naranja","Negro","Purpura","Rojo","Verde","Random"};
         spinColores.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, colores));
 
         spinImagen = (Spinner) findViewById(R.id.spinner2);
-        String[] imagenes = {"vacio","carraso","carrasogif","conejo","conejogif","gatos","gatosgif","modelo","modelogif","moto","motogif","perro","perrogif","pikachu","pikachugif","Random"};
         spinImagen.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, imagenes));
 
         spinFrase = (Spinner) findViewById(R.id.spinner3);
-        String[] frases = {"ninguna","Amor","Belleza","Esperanza","Cohelo","Inteligencia","Respeto","Sorpresa","Optimismo","Random"};
         spinFrase.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, frases));
 
         spinSonido = (Spinner) findViewById(R.id.spinner4);
-        String[] sonidos = {"silencio","explosion","grillo","laser","mensaje","gritopikachu","redobles","trompeta","Random"};
         spinSonido.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sonidos));
 
     }
@@ -46,4 +47,23 @@ public class MainActivity extends AppCompatActivity {
         startActivity(cambio);
 
     }
+
+    public void cambiarRandom(View view){
+
+        Intent cambio = new Intent(this,SegundoActivity.class);
+
+        int randCol= (int) (8*Math.random());
+        int randImg= (int) (14*Math.random());
+        int randFrase= (int) (8*Math.random());
+        int randSon= (int) (7*Math.random());
+
+        cambio.putExtra("color",colores[randCol]);
+        cambio.putExtra( "imagen",imagenes[randImg]);
+        cambio.putExtra("texto",frases[randFrase]);
+        cambio.putExtra("sonido",sonidos[randSon]);
+
+        startActivity(cambio);
+
+    }
+
 }
